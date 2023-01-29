@@ -1,10 +1,21 @@
 import React from "react";
+import { NodeResizer, NodeResizeControl } from "@reactflow/node-resizer";
+import "@reactflow/node-resizer/dist/style.css";
 import { NodeProps, Handle, Position } from "reactflow";
 import { SquareWrapper } from "./styled";
+import "@reactflow/node-resizer/dist/style.css";
 
-function Square(NodeProps) {
+function Square({ selected }) {
   return (
     <SquareWrapper>
+      <NodeResizer
+        minWidth={200}
+        minHeight={200}
+        isVisible={selected}
+        lineClassName="line"
+        handleClassName="handle-resize"
+
+      />
       <Handle
         id="right"
         className="handle handle--right"

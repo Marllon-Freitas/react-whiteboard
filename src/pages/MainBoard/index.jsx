@@ -10,6 +10,7 @@ import ReactFlow, {
 import "reactflow/dist/style.css";
 import DefaultEdge from "../../components/Edges/DefaultEdge";
 import Square from "../../components/nodes/Square";
+import ToolBar from "../../components/ToolBar";
 import { MainBoardWrapper } from "./styled";
 
 const NODES_TYPES = {
@@ -44,6 +45,17 @@ function MainBoard() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  function addSquareNode() {
+    const newNode = {
+      id: `${nodes.length + 1}`,
+      type: "square",
+      position: { x: 150, y: 25 },
+      data: {},
+    };
+
+    setNodes((nodes) => [...nodes, newNode]);
+  }
+
   return (
     <MainBoardWrapper>
       <ReactFlow
@@ -62,6 +74,7 @@ function MainBoard() {
         <Background variant="dots" gap={12} size={1} color="#d7dce1" />
         <Controls />
       </ReactFlow>
+      <ToolBar addSquareNode={addSquareNode} />
     </MainBoardWrapper>
   );
 }

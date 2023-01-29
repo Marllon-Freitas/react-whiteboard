@@ -1,9 +1,22 @@
 import styled from "styled-components";
 
 export const SquareWrapper = styled.div`
-  width: 250px;
-  height: 250px;
+  min-width: 200px;
+  min-height: 200px;
+  width: 100%;
+  height: 100%;
   background-color: #8049f4;
+
+  .line {
+    border: 1px solid #80caff;
+  }
+
+  &:first-child .handle-resize {
+    width: 0.75rem;
+    height: 0.75rem;
+    background-color: #fff;
+    border: 2px solid #80caff;
+  }
 
   .handle {
     background-color: #80caff;
