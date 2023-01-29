@@ -1,6 +1,6 @@
 import { getSmoothStepPath } from "reactflow";
 
-export default function DefaultEdge({
+export default function DottedEdge({
   id,
   sourceX,
   sourceY,
@@ -18,7 +18,7 @@ export default function DefaultEdge({
     sourcePosition,
     targetX,
     targetY,
-    targetPosition
+    targetPosition,
   });
 
   return (
@@ -26,7 +26,7 @@ export default function DefaultEdge({
       <path
         id={id}
         style={style}
-        className="react-flow__edge-path default-edge"
+        className="react-flow__edge-path dotted-edge"
         d={edgePath}
         markerEnd={markerEnd}
       />

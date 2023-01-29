@@ -9,7 +9,13 @@ function ToolBar() {
   return (
     <ToolbarRoot>
       <ToolbarButton
+        className="square"
         onDragStart={(event) => onDragStart(event, "square")}
+        draggable
+      ></ToolbarButton>
+      <ToolbarButton
+        className="circle"
+        onDragStart={(event) => onDragStart(event, "circle")}
         draggable
       ></ToolbarButton>
     </ToolbarRoot>
