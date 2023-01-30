@@ -6,6 +6,11 @@ export const SquareWrapper = styled.div`
   width: 100%;
   height: 100%;
   background-color: #8049f4;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   .line {
     border: 1px solid #80caff;
@@ -42,5 +47,24 @@ export const SquareWrapper = styled.div`
   }
   .handle.react-flow__handle-bottom {
     margin-bottom: -1rem;
+  }
+
+  .square-input-wrapper input,
+  .square-input-wrapper .square-input-wrapper-text {
+    min-height: 2rem;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: transparent;
+    text-align: center;
+    color: #fff;
+    font-size: 1rem;
+  }
+  
+  .square-input-wrapper input {
+    width: 100%;
   }
 `;
