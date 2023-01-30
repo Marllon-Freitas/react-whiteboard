@@ -1,6 +1,7 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+you can test his progress here [https://react-whiteboard.netlify.app/](https://react-whiteboard.netlify.app/)
 
 ## Available Scripts
 
